@@ -1,0 +1,1799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expert Orthopaedic Consultation | OrthoNow Bengaluru</title>
+  <meta name="description" content="Book your expert orthopaedic consultation at OrthoNow Bengaluru. Trusted by 50,000+ patients. Same-day appointments available for back pain & knee pain.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Expert Orthopaedic Consultation | OrthoNow">
+  <meta property="og:description" content="Get expert orthopaedic care for back pain and knee pain. Book your consultation today.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ====================================================
+       CSS RESET & BASE
+       Minimal reset for consistent cross-browser rendering.
+       Using system font stack with Inter as primary.
+    ==================================================== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      /* Brand Colors — Deep teal for medical trust, warm accents for urgency */
+      --color-primary: #0F766E;
+      --color-primary-dark: #0D5C56;
+      --color-primary-light: #14B8A6;
+      --color-accent: #F59E0B;
+      --color-accent-dark: #D97706;
+
+      /* Neutrals */
+      --color-bg: #F8FAFB;
+      --color-surface: #FFFFFF;
+      --color-text-primary: #1E293B;
+      --color-text-secondary: #64748B;
+      --color-text-muted: #94A3B8;
+      --color-border: #E2E8F0;
+      --color-border-focus: #0F766E;
+
+      /* Feedback Colors */
+      --color-error: #DC2626;
+      --color-error-bg: #FEF2F2;
+      --color-success: #059669;
+      --color-success-bg: #ECFDF5;
+
+      /* Shadows */
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -2px rgba(0,0,0,0.05);
+      --shadow-lg: 0 10px 25px -3px rgba(0,0,0,0.08), 0 4px 10px -4px rgba(0,0,0,0.04);
+      --shadow-xl: 0 20px 40px -5px rgba(0,0,0,0.1);
+
+      /* Spacing Scale */
+      --space-xs: 4px;
+      --space-sm: 8px;
+      --space-md: 16px;
+      --space-lg: 24px;
+      --space-xl: 32px;
+      --space-2xl: 48px;
+      --space-3xl: 64px;
+
+      /* Typography */
+      --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-size-sm: 0.875rem;
+      --font-size-base: 1rem;
+      --font-size-lg: 1.125rem;
+      --font-size-xl: 1.25rem;
+      --font-size-2xl: 1.5rem;
+      --font-size-3xl: 1.875rem;
+      --font-size-4xl: 2.25rem;
+
+      /* Border Radius */
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-xl: 20px;
+      --radius-full: 9999px;
+
+      /* Transitions */
+      --transition-fast: 150ms ease;
+      --transition-base: 250ms ease;
+      --transition-slow: 400ms ease;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: var(--font-family);
+      font-size: var(--font-size-base);
+      line-height: 1.6;
+      color: var(--color-text-primary);
+      background-color: var(--color-bg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ====================================================
+       UTILITY CLASSES
+    ==================================================== */
+    .container {
+      width: 100%;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 var(--space-md);
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    /* ====================================================
+       HEADER — Minimal top bar with logo & CTA
+       CRO: Phone number visible on all screens for
+       users who prefer calling over form submission.
+    ==================================================== */
+    .header {
+      background: var(--color-surface);
+      border-bottom: 1px solid var(--color-border);
+      padding: var(--space-md) 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header__logo {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+
+    .header__logo-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .header__logo-icon svg {
+      width: 22px;
+      height: 22px;
+      fill: #FFFFFF;
+    }
+
+    .header__logo-text {
+      font-size: var(--font-size-xl);
+      font-weight: 800;
+      color: var(--color-primary);
+      letter-spacing: -0.02em;
+    }
+
+    .header__phone {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 600;
+      font-size: var(--font-size-sm);
+      color: var(--color-primary);
+      padding: var(--space-sm) var(--space-md);
+      border: 2px solid var(--color-primary);
+      border-radius: var(--radius-full);
+      transition: all var(--transition-fast);
+      cursor: pointer;
+    }
+
+    .header__phone:hover {
+      background: var(--color-primary);
+      color: #FFFFFF;
+    }
+
+    .header__phone svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    /* ====================================================
+       HERO SECTION
+       CRO: Headline addresses the pain directly.
+       Subheadline builds urgency & trust.
+       Form is above-the-fold on all devices.
+       Split layout: emotional copy left, form right.
+    ==================================================== */
+    .hero {
+      padding: var(--space-3xl) 0 var(--space-2xl);
+      background: linear-gradient(175deg, #F0FDFA 0%, var(--color-bg) 50%);
+    }
+
+    .hero__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-3xl);
+      align-items: center;
+    }
+
+    .hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--color-success-bg);
+      color: var(--color-success);
+      font-size: var(--font-size-sm);
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      margin-bottom: var(--space-lg);
+      animation: fadeSlideUp 0.6s ease;
+    }
+
+    .hero__badge svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+    }
+
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero__headline {
+      font-size: clamp(var(--font-size-3xl), 4.5vw, var(--font-size-4xl));
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-md);
+      animation: fadeSlideUp 0.6s ease 0.1s both;
+    }
+
+    .hero__headline-accent {
+      color: var(--color-primary);
+    }
+
+    .hero__subheadline {
+      font-size: var(--font-size-lg);
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+      margin-bottom: var(--space-xl);
+      max-width: 520px;
+      animation: fadeSlideUp 0.6s ease 0.2s both;
+    }
+
+    /* Pain Points Chips */
+    .hero__pain-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-xl);
+      animation: fadeSlideUp 0.6s ease 0.3s both;
+    }
+
+    .hero__pain-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #FFF7ED;
+      color: #C2410C;
+      font-size: var(--font-size-sm);
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      border: 1px solid #FDBA74;
+    }
+
+    /* Quick Trust Stats */
+    .hero__stats {
+      display: flex;
+      gap: var(--space-xl);
+      animation: fadeSlideUp 0.6s ease 0.4s both;
+    }
+
+    .hero__stat {
+      text-align: left;
+    }
+
+    .hero__stat-number {
+      font-size: var(--font-size-2xl);
+      font-weight: 800;
+      color: var(--color-primary);
+      line-height: 1.2;
+    }
+
+    .hero__stat-label {
+      font-size: var(--font-size-sm);
+      color: var(--color-text-secondary);
+      font-weight: 500;
+    }
+
+    /* ====================================================
+       FORM CARD
+       CRO: Minimal 2-field form reduces friction.
+       Elevated card with strong visual hierarchy.
+       CTA button uses high-contrast accent color.
+       Social proof ("200+ booked this week") inside form
+       creates urgency and validation.
+    ==================================================== */
+    .form-card {
+      background: var(--color-surface);
+      border-radius: var(--radius-xl);
+      padding: var(--space-xl) var(--space-lg);
+      box-shadow: var(--shadow-xl);
+      border: 1px solid var(--color-border);
+      position: relative;
+      animation: fadeSlideUp 0.6s ease 0.2s both;
+    }
+
+    .form-card__header {
+      text-align: center;
+      margin-bottom: var(--space-lg);
+    }
+
+    .form-card__title {
+      font-size: var(--font-size-xl);
+      font-weight: 700;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-xs);
+    }
+
+    .form-card__subtitle {
+      font-size: var(--font-size-sm);
+      color: var(--color-text-secondary);
+    }
+
+    .form-card__urgency {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: #FFF7ED;
+      color: #C2410C;
+      font-size: var(--font-size-sm);
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: var(--radius-md);
+      margin-bottom: var(--space-lg);
+    }
+
+    .form-card__urgency svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .form__group {
+      margin-bottom: var(--space-md);
+    }
+
+    .form__label {
+      display: block;
+      font-size: var(--font-size-sm);
+      font-weight: 600;
+      color: var(--color-text-primary);
+      margin-bottom: 6px;
+    }
+
+    .form__input {
+      width: 100%;
+      padding: 14px 16px;
+      font-size: var(--font-size-base);
+      font-family: var(--font-family);
+      color: var(--color-text-primary);
+      background: var(--color-bg);
+      border: 2px solid var(--color-border);
+      border-radius: var(--radius-md);
+      transition: all var(--transition-fast);
+      outline: none;
+    }
+
+    .form__input::placeholder {
+      color: var(--color-text-muted);
+    }
+
+    .form__input:focus {
+      border-color: var(--color-border-focus);
+      background: var(--color-surface);
+      box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.1);
+    }
+
+    .form__input--error {
+      border-color: var(--color-error);
+      background: var(--color-error-bg);
+    }
+
+    .form__input--error:focus {
+      box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+    }
+
+    .form__error {
+      font-size: 0.8125rem;
+      color: var(--color-error);
+      margin-top: 4px;
+      display: none;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .form__error.visible {
+      display: flex;
+    }
+
+    .form__error svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+      flex-shrink: 0;
+    }
+
+    .form__phone-prefix {
+      position: relative;
+    }
+
+    .form__phone-prefix .form__input {
+      padding-left: 58px;
+    }
+
+    .form__phone-prefix::before {
+      content: '+91';
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: var(--font-size-base);
+      font-weight: 600;
+      color: var(--color-text-secondary);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .form__phone-prefix::after {
+      content: '';
+      position: absolute;
+      left: 50px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 24px;
+      background: var(--color-border);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* CTA Button */
+    .form__submit {
+      width: 100%;
+      padding: 16px;
+      font-size: var(--font-size-base);
+      font-weight: 700;
+      font-family: var(--font-family);
+      color: #FFFFFF;
+      background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
+      border: none;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+      margin-top: var(--space-sm);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .form__submit:hover:not(:disabled) {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.45);
+    }
+
+    .form__submit:active:not(:disabled) {
+      transform: translateY(0);
+    }
+
+    .form__submit:disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .form__submit--loading {
+      color: transparent;
+    }
+
+    .form__submit--loading::after {
+      content: '';
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      top: 50%;
+      left: 50%;
+      margin-left: -11px;
+      margin-top: -11px;
+      border: 3px solid rgba(255,255,255,0.3);
+      border-top-color: #FFFFFF;
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .form__disclaimer {
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+      margin-top: var(--space-md);
+      line-height: 1.5;
+    }
+
+    .form__disclaimer svg {
+      width: 12px;
+      height: 12px;
+      fill: currentColor;
+      vertical-align: -2px;
+      margin-right: 2px;
+    }
+
+    /* ====================================================
+       THANK YOU STATE
+       CRO: Confirms submission, sets expectations,
+       provides next-step clarity.
+    ==================================================== */
+    .thank-you {
+      display: none;
+      text-align: center;
+      padding: var(--space-xl) var(--space-lg);
+    }
+
+    .thank-you.visible {
+      display: block;
+      animation: fadeSlideUp 0.5s ease;
+    }
+
+    .thank-you__icon {
+      width: 72px;
+      height: 72px;
+      background: var(--color-success-bg);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--space-lg);
+    }
+
+    .thank-you__icon svg {
+      width: 36px;
+      height: 36px;
+      fill: var(--color-success);
+    }
+
+    .thank-you__title {
+      font-size: var(--font-size-xl);
+      font-weight: 700;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-sm);
+    }
+
+    .thank-you__message {
+      font-size: var(--font-size-base);
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+      margin-bottom: var(--space-lg);
+    }
+
+    .thank-you__next-steps {
+      background: var(--color-bg);
+      border-radius: var(--radius-md);
+      padding: var(--space-md);
+      text-align: left;
+    }
+
+    .thank-you__next-steps-title {
+      font-size: var(--font-size-sm);
+      font-weight: 700;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .thank-you__step {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-sm);
+      font-size: var(--font-size-sm);
+      color: var(--color-text-secondary);
+    }
+
+    .thank-you__step:last-child {
+      margin-bottom: 0;
+    }
+
+    .thank-you__step-num {
+      width: 22px;
+      height: 22px;
+      background: var(--color-primary);
+      color: #FFFFFF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* ====================================================
+       TRUST SECTION
+       CRO: Social proof and credibility signals.
+       Doctor credentials + clinic stats + patient reviews.
+       This section addresses the #1 conversion barrier:
+       "Can I trust this clinic?"
+    ==================================================== */
+    .trust {
+      padding: var(--space-3xl) 0;
+      background: var(--color-surface);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .trust__header {
+      text-align: center;
+      margin-bottom: var(--space-2xl);
+    }
+
+    .trust__label {
+      font-size: var(--font-size-sm);
+      font-weight: 600;
+      color: var(--color-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: var(--space-sm);
+    }
+
+    .trust__title {
+      font-size: var(--font-size-2xl);
+      font-weight: 800;
+      color: var(--color-text-primary);
+      letter-spacing: -0.02em;
+    }
+
+    /* Stats Row */
+    .trust__stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-lg);
+      margin-bottom: var(--space-2xl);
+    }
+
+    .trust__stat-card {
+      text-align: center;
+      padding: var(--space-lg);
+      background: var(--color-bg);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--color-border);
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    .trust__stat-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .trust__stat-icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, #F0FDFA, #CCFBF1);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--space-md);
+    }
+
+    .trust__stat-icon svg {
+      width: 22px;
+      height: 22px;
+      fill: var(--color-primary);
+    }
+
+    .trust__stat-value {
+      font-size: var(--font-size-2xl);
+      font-weight: 800;
+      color: var(--color-text-primary);
+      line-height: 1.2;
+    }
+
+    .trust__stat-desc {
+      font-size: var(--font-size-sm);
+      color: var(--color-text-secondary);
+      margin-top: 4px;
+    }
+
+    /* Doctor Card */
+    .trust__doctor {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: var(--space-lg);
+      background: linear-gradient(135deg, #F0FDFA 0%, #FFFFFF 100%);
+      border: 1px solid #CCFBF1;
+      border-radius: var(--radius-xl);
+      padding: var(--space-xl);
+      margin-bottom: var(--space-2xl);
+      align-items: center;
+    }
+
+    .trust__doctor-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .trust__doctor-avatar svg {
+      width: 48px;
+      height: 48px;
+      fill: rgba(255,255,255,0.9);
+    }
+
+    .trust__doctor-name {
+      font-size: var(--font-size-lg);
+      font-weight: 700;
+      color: var(--color-text-primary);
+      margin-bottom: 4px;
+    }
+
+    .trust__doctor-title {
+      font-size: var(--font-size-sm);
+      color: var(--color-primary);
+      font-weight: 600;
+      margin-bottom: var(--space-sm);
+    }
+
+    .trust__doctor-credentials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .trust__doctor-credential {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--color-text-secondary);
+      background: var(--color-surface);
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--color-border);
+    }
+
+    .trust__doctor-bio {
+      font-size: var(--font-size-sm);
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+      margin-top: var(--space-sm);
+    }
+
+    /* Reviews */
+    .trust__reviews {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-lg);
+    }
+
+    .review-card {
+      background: var(--color-bg);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      border: 1px solid var(--color-border);
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    .review-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .review-card__stars {
+      color: var(--color-accent);
+      font-size: var(--font-size-sm);
+      margin-bottom: var(--space-sm);
+      letter-spacing: 2px;
+    }
+
+    .review-card__text {
+      font-size: var(--font-size-sm);
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+      margin-bottom: var(--space-md);
+      font-style: italic;
+    }
+
+    .review-card__author {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+
+    .review-card__author-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      font-size: var(--font-size-sm);
+      font-weight: 700;
+    }
+
+    .review-card__author-name {
+      font-size: var(--font-size-sm);
+      font-weight: 600;
+      color: var(--color-text-primary);
+    }
+
+    .review-card__author-detail {
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+    }
+
+    /* ====================================================
+       CONDITIONS SECTION
+       CRO: Addresses specific pain points of target audience.
+       Working professionals with back/knee pain.
+    ==================================================== */
+    .conditions {
+      padding: var(--space-3xl) 0;
+      background: var(--color-bg);
+    }
+
+    .conditions__header {
+      text-align: center;
+      margin-bottom: var(--space-2xl);
+    }
+
+    .conditions__label {
+      font-size: var(--font-size-sm);
+      font-weight: 600;
+      color: var(--color-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: var(--space-sm);
+    }
+
+    .conditions__title {
+      font-size: var(--font-size-2xl);
+      font-weight: 800;
+      color: var(--color-text-primary);
+      letter-spacing: -0.02em;
+    }
+
+    .conditions__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-lg);
+    }
+
+    .condition-card {
+      background: var(--color-surface);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      border: 1px solid var(--color-border);
+      display: flex;
+      gap: var(--space-md);
+      align-items: flex-start;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    .condition-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .condition-card__icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, #FFF7ED, #FFEDD5);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .condition-card__icon svg {
+      width: 24px;
+      height: 24px;
+      fill: #C2410C;
+    }
+
+    .condition-card__title {
+      font-size: var(--font-size-base);
+      font-weight: 700;
+      color: var(--color-text-primary);
+      margin-bottom: 4px;
+    }
+
+    .condition-card__desc {
+      font-size: var(--font-size-sm);
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+    }
+
+    /* ====================================================
+       BOTTOM CTA SECTION
+       CRO: Secondary conversion point for users who
+       scrolled past the hero. Repeats form or provides
+       a direct anchor to scroll back.
+    ==================================================== */
+    .bottom-cta {
+      padding: var(--space-3xl) 0;
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+      text-align: center;
+    }
+
+    .bottom-cta__title {
+      font-size: var(--font-size-2xl);
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: var(--space-sm);
+      letter-spacing: -0.02em;
+    }
+
+    .bottom-cta__subtitle {
+      font-size: var(--font-size-base);
+      color: rgba(255,255,255,0.8);
+      margin-bottom: var(--space-xl);
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .bottom-cta__btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+      background: var(--color-accent);
+      color: #FFFFFF;
+      font-size: var(--font-size-base);
+      font-weight: 700;
+      font-family: var(--font-family);
+      padding: 16px 36px;
+      border: none;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+      text-decoration: none;
+    }
+
+    .bottom-cta__btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+      background: var(--color-accent-dark);
+    }
+
+    .bottom-cta__btn svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    /* ====================================================
+       FOOTER
+    ==================================================== */
+    .footer {
+      padding: var(--space-lg) 0;
+      background: var(--color-text-primary);
+      text-align: center;
+    }
+
+    .footer__text {
+      font-size: var(--font-size-sm);
+      color: var(--color-text-muted);
+    }
+
+    .footer__cities {
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+      margin-top: var(--space-xs);
+      opacity: 0.7;
+    }
+
+    /* ====================================================
+       WHATSAPP FLOATING WIDGET
+       CRO: Persistent access to WhatsApp — India's
+       preferred messaging channel.
+    ==================================================== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 56px;
+      height: 56px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+      z-index: 999;
+      transition: all var(--transition-fast);
+      cursor: pointer;
+      border: none;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+    }
+
+    .whatsapp-float svg {
+      width: 28px;
+      height: 28px;
+      fill: #FFFFFF;
+    }
+
+    /* ====================================================
+       RESPONSIVE DESIGN
+       Mobile-first adjustments.
+       Form remains prominent and accessible on all sizes.
+    ==================================================== */
+    @media (max-width: 900px) {
+      .hero__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+      }
+
+      .hero {
+        padding: var(--space-xl) 0 var(--space-xl);
+      }
+
+      .trust__stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .trust__reviews {
+        grid-template-columns: 1fr;
+      }
+
+      .trust__doctor {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .trust__doctor-avatar {
+        margin: 0 auto;
+      }
+
+      .trust__doctor-credentials {
+        justify-content: center;
+      }
+
+      .conditions__grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero__stats {
+        gap: var(--space-md);
+      }
+
+      .hero__stat-number {
+        font-size: var(--font-size-xl);
+      }
+
+      .trust__stats {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-md);
+      }
+
+      .header__phone span {
+        display: none;
+      }
+
+      .form-card {
+        padding: var(--space-lg) var(--space-md);
+      }
+
+      .bottom-cta {
+        padding: var(--space-2xl) 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================
+       HEADER
+       Sticky header with logo and call CTA.
+       Phone number visible for direct-call users.
+  ============================================= -->
+  <header class="header" role="banner">
+    <div class="container header__inner">
+      <div class="header__logo">
+        <div class="header__logo-icon" aria-hidden="true">
+          <!-- Bone/Joint Icon -->
+          <svg viewBox="0 0 24 24"><path d="M17.74 6.27a4.47 4.47 0 0 0-3.49-1.63 4.47 4.47 0 0 0-3.49 1.63L8.69 8.93a1 1 0 0 0 0 1.27l.55.69a1 1 0 0 1 0 1.22l-.55.69a1 1 0 0 0 0 1.27l2.07 2.66a4.47 4.47 0 0 0 3.49 1.63 4.47 4.47 0 0 0 3.49-1.63l2.07-2.66a1 1 0 0 0 0-1.27l-.55-.69a1 1 0 0 1 0-1.22l.55-.69a1 1 0 0 0 0-1.27L17.74 6.27zM5.5 4A2.5 2.5 0 0 0 3 6.5 2.5 2.5 0 0 0 5.5 9 2.5 2.5 0 0 0 8 6.5 2.5 2.5 0 0 0 5.5 4zm0 11A2.5 2.5 0 0 0 3 17.5 2.5 2.5 0 0 0 5.5 20 2.5 2.5 0 0 0 8 17.5 2.5 2.5 0 0 0 5.5 15z"/></svg>
+        </div>
+        <span class="header__logo-text">OrthoNow</span>
+      </div>
+      <a href="tel:+918001234567" class="header__phone" id="header-call-btn" aria-label="Call OrthoNow">
+        <!-- Phone Icon -->
+        <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.36 11.36 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.49a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.57 1 1 0 0 1-.24 1.02l-2.2 2.2z"/></svg>
+        <span>800-123-4567</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================================
+         HERO SECTION
+         CRO Strategy:
+         - Headline directly names the pain ("back pain",
+           "knee pain") to match search intent
+         - Subheadline builds credibility (50,000+ patients)
+         - Pain-point tags match Google Ads keywords
+         - Form is above-the-fold on desktop
+         - Stats provide instant trust signals
+    ============================================= -->
+    <section class="hero" id="hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <div class="hero__badge">
+            <!-- Checkmark Icon -->
+            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+            Same-Day Appointments Available
+          </div>
+
+          <h1 class="hero__headline">
+            Don't let pain <br>
+            <span class="hero__headline-accent">hold you back.</span>
+          </h1>
+
+          <p class="hero__subheadline">
+            Get an expert orthopaedic opinion from Bengaluru's most trusted specialists. 
+            Walk in, get assessed, and start your recovery — all in one visit.
+          </p>
+
+          <div class="hero__pain-tags">
+            <span class="hero__pain-tag">
+              <!-- Warning/Pain Icon -->
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#C2410C"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              Back Pain
+            </span>
+            <span class="hero__pain-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#C2410C"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              Knee Pain
+            </span>
+            <span class="hero__pain-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#C2410C"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              Joint Stiffness
+            </span>
+            <span class="hero__pain-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#C2410C"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              Sports Injury
+            </span>
+          </div>
+
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <div class="hero__stat-number">50,000+</div>
+              <div class="hero__stat-label">Patients Treated</div>
+            </div>
+            <div class="hero__stat">
+              <div class="hero__stat-number">9</div>
+              <div class="hero__stat-label">Clinics Across 3 Cities</div>
+            </div>
+            <div class="hero__stat">
+              <div class="hero__stat-number">15+</div>
+              <div class="hero__stat-label">Senior Specialists</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============================================
+             CONSULTATION FORM
+             CRO Strategy:
+             - Only 2 fields (Name + Phone) to minimize friction.
+               Every additional field reduces conversion by ~10%.
+             - "+91" prefix reduces typing and signals Indian phone format.
+             - Urgency bar ("200+ booked this week") creates social proof.
+             - CTA text is action-specific, not generic "Submit".
+             - Disclaimer text below CTA addresses privacy concern.
+        ============================================= -->
+        <div class="form-card" id="form-card">
+          <div id="form-section">
+            <div class="form-card__header">
+              <h2 class="form-card__title">Book Your Free Consultation</h2>
+              <p class="form-card__subtitle">Expert opinion within 24 hours</p>
+            </div>
+
+            <div class="form-card__urgency">
+              <!-- Fire Icon -->
+              <svg viewBox="0 0 24 24"><path d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5.67zM11.71 19c-1.78 0-3.22-1.4-3.22-3.14 0-1.62 1.05-2.76 2.81-3.12 1.77-.36 3.6-1.21 4.62-2.58.39 1.29.59 2.65.59 4.04 0 2.65-2.15 4.8-4.8 4.8z"/></svg>
+              200+ consultations booked this week
+            </div>
+
+            <form id="consultation-form" novalidate>
+              <div class="form__group">
+                <label for="patient-name" class="form__label">Your Name</label>
+                <input
+                  type="text"
+                  id="patient-name"
+                  name="patient_name"
+                  class="form__input"
+                  placeholder="Enter your full name"
+                  required
+                  autocomplete="name"
+                  maxlength="100"
+                >
+                <div class="form__error" id="name-error" role="alert">
+                  <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                  <span></span>
+                </div>
+              </div>
+
+              <div class="form__group">
+                <label for="patient-phone" class="form__label">Phone Number</label>
+                <div class="form__phone-prefix">
+                  <input
+                    type="tel"
+                    id="patient-phone"
+                    name="patient_phone"
+                    class="form__input"
+                    placeholder="98765 43210"
+                    required
+                    autocomplete="tel"
+                    maxlength="10"
+                    inputmode="numeric"
+                    pattern="[6-9][0-9]{9}"
+                  >
+                </div>
+                <div class="form__error" id="phone-error" role="alert">
+                  <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                  <span></span>
+                </div>
+              </div>
+
+              <button type="submit" class="form__submit" id="submit-btn">
+                Book My Free Consultation →
+              </button>
+
+              <p class="form__disclaimer">
+                <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2z"/></svg>
+                Your data is secure. We'll only call to confirm your appointment.
+              </p>
+            </form>
+          </div>
+
+          <!-- Thank You State (hidden by default) -->
+          <div class="thank-you" id="thank-you-section" role="status" aria-live="polite">
+            <div class="thank-you__icon">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+            </div>
+            <h3 class="thank-you__title">Thank You! Your Consultation is Booked.</h3>
+            <p class="thank-you__message">
+              Our care coordinator will call you within <strong>2 hours</strong> to confirm your appointment time and clinic location.
+            </p>
+            <div class="thank-you__next-steps">
+              <div class="thank-you__next-steps-title">What Happens Next</div>
+              <div class="thank-you__step">
+                <span class="thank-you__step-num">1</span>
+                <span>Our team calls you to confirm the appointment slot</span>
+              </div>
+              <div class="thank-you__step">
+                <span class="thank-you__step-num">2</span>
+                <span>You receive a WhatsApp confirmation with clinic address</span>
+              </div>
+              <div class="thank-you__step">
+                <span class="thank-you__step-num">3</span>
+                <span>Visit the clinic — consultation takes 20–30 minutes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         TRUST SECTION
+         CRO Strategy:
+         - Doctor credentials establish clinical authority
+         - Patient count establishes social proof
+         - Star ratings provide review validation
+         - Specific patient names + conditions add authenticity
+    ============================================= -->
+    <section class="trust" id="trust" aria-labelledby="trust-heading">
+      <div class="container">
+        <div class="trust__header">
+          <div class="trust__label">Why Patients Choose Us</div>
+          <h2 class="trust__title" id="trust-heading">Trusted by 50,000+ Patients Since 2015</h2>
+        </div>
+
+        <!-- Stats -->
+        <div class="trust__stats">
+          <div class="trust__stat-card">
+            <div class="trust__stat-icon">
+              <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+            </div>
+            <div class="trust__stat-value">50,000+</div>
+            <div class="trust__stat-desc">Patients Treated</div>
+          </div>
+          <div class="trust__stat-card">
+            <div class="trust__stat-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <div class="trust__stat-value">4.8/5</div>
+            <div class="trust__stat-desc">Google Rating</div>
+          </div>
+          <div class="trust__stat-card">
+            <div class="trust__stat-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <div class="trust__stat-value">9</div>
+            <div class="trust__stat-desc">Clinics Across India</div>
+          </div>
+          <div class="trust__stat-card">
+            <div class="trust__stat-icon">
+              <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
+            </div>
+            <div class="trust__stat-value">15+</div>
+            <div class="trust__stat-desc">Senior Specialists</div>
+          </div>
+        </div>
+
+        <!-- Featured Doctor -->
+        <div class="trust__doctor">
+          <div class="trust__doctor-avatar" aria-hidden="true">
+            <!-- Doctor Icon -->
+            <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          </div>
+          <div>
+            <div class="trust__doctor-name">Dr. Rajesh Malhotra</div>
+            <div class="trust__doctor-title">Chief Orthopaedic Surgeon & Founder</div>
+            <div class="trust__doctor-credentials">
+              <span class="trust__doctor-credential">MBBS</span>
+              <span class="trust__doctor-credential">MS (Ortho)</span>
+              <span class="trust__doctor-credential">Fellowship — AIIMS Delhi</span>
+              <span class="trust__doctor-credential">22 Years Experience</span>
+            </div>
+            <p class="trust__doctor-bio">
+              Former Senior Consultant at Manipal Hospital, Dr. Malhotra specialises in minimally invasive spine surgery and knee replacement. He has performed over 8,000 successful procedures and leads OrthoNow's clinical team across all 9 centres.
+            </p>
+          </div>
+        </div>
+
+        <!-- Patient Reviews -->
+        <div class="trust__reviews">
+          <div class="review-card">
+            <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-card__text">
+              "I had severe lower back pain for 3 years. Dr. Malhotra diagnosed the issue in my first visit and I started feeling better within 2 weeks of treatment. No surgery needed."
+            </p>
+            <div class="review-card__author">
+              <div class="review-card__author-avatar">RK</div>
+              <div>
+                <div class="review-card__author-name">Ravi Kumar</div>
+                <div class="review-card__author-detail">IT Professional, Koramangala</div>
+              </div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-card__text">
+              "After my knee started hurting during morning walks, I visited OrthoNow. The team was professional and the treatment plan was clear. I'm back to walking 5km daily."
+            </p>
+            <div class="review-card__author">
+              <div class="review-card__author-avatar">PS</div>
+              <div>
+                <div class="review-card__author-name">Priya Sharma</div>
+                <div class="review-card__author-detail">Marketing Manager, Indiranagar</div>
+              </div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-card__text">
+              "Got an appointment the same day I called. The clinic was clean, staff was courteous, and the doctor spent 30 minutes understanding my condition. Highly recommend."
+            </p>
+            <div class="review-card__author">
+              <div class="review-card__author-avatar">AM</div>
+              <div>
+                <div class="review-card__author-name">Arjun Menon</div>
+                <div class="review-card__author-detail">Startup Founder, HSR Layout</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         CONDITIONS SECTION
+         CRO Strategy:
+         - Matches Google Ads keywords (back pain, knee pain)
+         - Positions conditions as "treatable, not terminal"
+         - Working professional language ("desk job", "morning run")
+    ============================================= -->
+    <section class="conditions" id="conditions" aria-labelledby="conditions-heading">
+      <div class="container">
+        <div class="conditions__header">
+          <div class="conditions__label">Conditions We Treat</div>
+          <h2 class="conditions__title" id="conditions-heading">Expert Care for Your Specific Condition</h2>
+        </div>
+
+        <div class="conditions__grid">
+          <div class="condition-card">
+            <div class="condition-card__icon">
+              <!-- Spine Icon -->
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            </div>
+            <div>
+              <h3 class="condition-card__title">Lower Back Pain</h3>
+              <p class="condition-card__desc">Caused by long hours at a desk? Our spine specialists identify the root cause and create a targeted treatment plan — often without surgery.</p>
+            </div>
+          </div>
+          <div class="condition-card">
+            <div class="condition-card__icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            </div>
+            <div>
+              <h3 class="condition-card__title">Knee Pain & Arthritis</h3>
+              <p class="condition-card__desc">Knee pain limiting your morning run or stair climbing? From early-stage arthritis to advanced joint care, we offer comprehensive treatment options.</p>
+            </div>
+          </div>
+          <div class="condition-card">
+            <div class="condition-card__icon">
+              <svg viewBox="0 0 24 24"><path d="M13.49 5.48c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm-3.6 13.9l1-4.4 2.1 2v6h2v-7.5l-2.1-2 .6-3c1.3 1.5 3.3 2.5 5.5 2.5v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1l-5.2 2.2v4.7h2v-3.4l1.8-.7-1.6 8.1-4.9-1-.4 2 7 1.4z"/></svg>
+            </div>
+            <div>
+              <h3 class="condition-card__title">Sports Injuries</h3>
+              <p class="condition-card__desc">Ligament tears, fractures, or muscle strains from weekend sports? Our sports medicine team gets you back to your active lifestyle safely.</p>
+            </div>
+          </div>
+          <div class="condition-card">
+            <div class="condition-card__icon">
+              <svg viewBox="0 0 24 24"><path d="M17.73 12.02l3.98-3.98c.39-.39.39-1.02 0-1.41l-4.34-4.34c-.39-.39-1.02-.39-1.41 0l-3.98 3.98L8 2.29C7.8 2.1 7.55 2 7.29 2c-.25 0-.51.1-.7.29L2.25 6.63c-.39.39-.39 1.02 0 1.41l3.98 3.98L2.25 16c-.39.39-.39 1.02 0 1.41l4.34 4.34c.39.39 1.02.39 1.41 0l3.98-3.98 3.98 3.98c.2.2.45.29.71.29.26 0 .51-.1.71-.29l4.34-4.34c.39-.39.39-1.02 0-1.41l-3.99-3.98zM12 9c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm-4.71 1.96L3.66 7.34l3.63-3.63 3.62 3.62-3.62 3.63zM10 13c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm2 2c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm2-4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2.66 9.34l-3.63-3.62 3.63-3.63 3.62 3.62-3.62 3.63z"/></svg>
+            </div>
+            <div>
+              <h3 class="condition-card__title">Joint Stiffness & Mobility</h3>
+              <p class="condition-card__desc">Waking up with stiff joints? Our specialists use advanced diagnostic imaging to find the cause and restore your full range of motion.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         BOTTOM CTA
+         CRO Strategy:
+         - Secondary conversion point for scroll-past users
+         - High-contrast section creates visual break
+         - Anchors back to the form for easy access
+    ============================================= -->
+    <section class="bottom-cta" aria-label="Book consultation">
+      <div class="container">
+        <h2 class="bottom-cta__title">Ready to Move Without Pain?</h2>
+        <p class="bottom-cta__subtitle">
+          Book your free consultation now. Our specialists have helped 50,000+ patients get back to living their best life.
+        </p>
+        <a href="#hero" class="bottom-cta__btn" id="bottom-cta-btn">
+          Book Free Consultation
+          <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <p class="footer__text">© 2026 OrthoNow. All Rights Reserved.</p>
+      <p class="footer__cities">Bengaluru · Hyderabad · Chennai — 9 Clinics Across South India</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Widget -->
+  <a href="https://wa.me/918001234567?text=Hi%2C%20I%20would%20like%20to%20book%20an%20orthopaedic%20consultation"
+     class="whatsapp-float"
+     id="whatsapp-widget"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- ============================================
+       JAVASCRIPT
+       - Form validation (Indian phone number)
+       - Duplicate submission prevention
+       - dataLayer push on successful submit
+       - Thank You state transition
+  ============================================= -->
+  <script>
+    /**
+     * OrthoNow Landing Page — Form Handler
+     * 
+     * This script handles:
+     * 1. Real-time form validation
+     * 2. Indian phone number validation (10 digits, starting with 6-9)
+     * 3. Duplicate submission prevention
+     * 4. dataLayer.push() for GTM tracking
+     * 5. Thank You state display without page reload
+     */
+
+    // Initialize dataLayer for GTM
+    window.dataLayer = window.dataLayer || [];
+
+    (function() {
+      'use strict';
+
+      // DOM References
+      var form = document.getElementById('consultation-form');
+      var nameInput = document.getElementById('patient-name');
+      var phoneInput = document.getElementById('patient-phone');
+      var submitBtn = document.getElementById('submit-btn');
+      var nameError = document.getElementById('name-error');
+      var phoneError = document.getElementById('phone-error');
+      var formSection = document.getElementById('form-section');
+      var thankYouSection = document.getElementById('thank-you-section');
+
+      // State
+      var isSubmitting = false;
+      var hasSubmitted = false;
+
+      /**
+       * Validates the patient name field.
+       * Rules: Required, minimum 2 characters, alphabetic with spaces.
+       * @returns {boolean} Whether the name is valid
+       */
+      function validateName() {
+        var name = nameInput.value.trim();
+        
+        if (!name) {
+          showError(nameInput, nameError, 'Please enter your name');
+          return false;
+        }
+        
+        if (name.length < 2) {
+          showError(nameInput, nameError, 'Name must be at least 2 characters');
+          return false;
+        }
+
+        if (!/^[a-zA-Z\s.'-]+$/.test(name)) {
+          showError(nameInput, nameError, 'Please enter a valid name');
+          return false;
+        }
+        
+        clearError(nameInput, nameError);
+        return true;
+      }
+
+      /**
+       * Validates the phone number field.
+       * Rules: Required, exactly 10 digits, must start with 6/7/8/9
+       * (valid Indian mobile number format).
+       * @returns {boolean} Whether the phone is valid
+       */
+      function validatePhone() {
+        var phone = phoneInput.value.replace(/\s/g, '').trim();
+        
+        if (!phone) {
+          showError(phoneInput, phoneError, 'Please enter your phone number');
+          return false;
+        }
+        
+        // Indian mobile numbers: 10 digits, starting with 6, 7, 8, or 9
+        var indianPhoneRegex = /^[6-9]\d{9}$/;
+        
+        if (!indianPhoneRegex.test(phone)) {
+          showError(phoneInput, phoneError, 'Enter a valid 10-digit Indian mobile number');
+          return false;
+        }
+        
+        clearError(phoneInput, phoneError);
+        return true;
+      }
+
+      /**
+       * Shows a validation error on a form field.
+       * @param {HTMLElement} input - The input element
+       * @param {HTMLElement} errorEl - The error message container
+       * @param {string} message - The error message text
+       */
+      function showError(input, errorEl, message) {
+        input.classList.add('form__input--error');
+        errorEl.querySelector('span').textContent = message;
+        errorEl.classList.add('visible');
+      }
+
+      /**
+       * Clears a validation error from a form field.
+       * @param {HTMLElement} input - The input element
+       * @param {HTMLElement} errorEl - The error message container
+       */
+      function clearError(input, errorEl) {
+        input.classList.remove('form__input--error');
+        errorEl.classList.remove('visible');
+      }
+
+      /**
+       * Extracts UTM parameters from the current page URL.
+       * Used to attribute the lead source in dataLayer events.
+       * @returns {Object} Object with utm_source, utm_medium, utm_campaign
+       */
+      function getUTMParams() {
+        var params = new URLSearchParams(window.location.search);
+        return {
+          source: params.get('utm_source') || 'direct',
+          medium: params.get('utm_medium') || 'none',
+          campaign: params.get('utm_campaign') || 'none'
+        };
+      }
+
+      /**
+       * Generates a simple session ID for tracking.
+       * In production, this would come from your session management system.
+       * @returns {string} A unique session identifier
+       */
+      function getSessionId() {
+        var sessionId = sessionStorage.getItem('on_session_id');
+        if (!sessionId) {
+          sessionId = Date.now().toString(36) + Math.random().toString(36).substr(2, 8);
+          sessionStorage.setItem('on_session_id', sessionId);
+        }
+        return sessionId;
+      }
+
+      // Real-time validation on blur (field exit)
+      nameInput.addEventListener('blur', validateName);
+      phoneInput.addEventListener('blur', validatePhone);
+
+      // Clear errors on input (immediate feedback)
+      nameInput.addEventListener('input', function() {
+        if (nameInput.classList.contains('form__input--error')) {
+          validateName();
+        }
+      });
+
+      // Restrict phone input to digits only
+      phoneInput.addEventListener('input', function() {
+        this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);
+        if (phoneInput.classList.contains('form__input--error')) {
+          validatePhone();
+        }
+      });
+
+      /**
+       * Form submission handler.
+       * 
+       * Flow:
+       * 1. Prevent default form submission (no page reload)
+       * 2. Validate all fields
+       * 3. If valid, disable submit button (prevent duplicates)
+       * 4. Simulate backend call (setTimeout in this demo)
+       * 5. Push dataLayer event for GTM
+       * 6. Show Thank You state
+       */
+      form.addEventListener('submit', function(e) {
+        // Prevent page reload
+        e.preventDefault();
+
+        // Prevent duplicate submissions
+        if (isSubmitting || hasSubmitted) {
+          return;
+        }
+
+        // Validate all fields
+        var isNameValid = validateName();
+        var isPhoneValid = validatePhone();
+
+        if (!isNameValid || !isPhoneValid) {
+          // Focus the first invalid field for accessibility
+          if (!isNameValid) {
+            nameInput.focus();
+          } else {
+            phoneInput.focus();
+          }
+          return;
+        }
+
+        // Mark as submitting
+        isSubmitting = true;
+        submitBtn.disabled = true;
+        submitBtn.classList.add('form__submit--loading');
+
+        // Collect form data
+        var patientName = nameInput.value.trim();
+        var patientPhone = phoneInput.value.replace(/\s/g, '').trim();
+        var utmParams = getUTMParams();
+        var sessionId = getSessionId();
+
+        /**
+         * Simulate backend API call.
+         * 
+         * In production, replace this setTimeout with an actual
+         * fetch() call to your booking API or HubSpot Forms API.
+         * 
+         * Example:
+         * fetch('https://api.orthonow.in/leads', {
+         *   method: 'POST',
+         *   headers: { 'Content-Type': 'application/json' },
+         *   body: JSON.stringify({ name: patientName, phone: patientPhone })
+         * })
+         * .then(response => response.json())
+         * .then(data => { onSuccess(data); })
+         * .catch(error => { onError(error); });
+         */
+        setTimeout(function() {
+          // ========================================================
+          // dataLayer PUSH — fires ONLY on successful form submission
+          // This is the exact event that GTM will capture.
+          // GTM Trigger: Custom Event = "consultation_form_submitted"
+          // GA4 Tag: Sends this as a GA4 event with all parameters.
+          // ========================================================
+          window.dataLayer.push({
+            'event': 'consultation_form_submitted',
+            'form_name': 'consultation_landing_page',
+            'patient_name': patientName,
+            'patient_phone': '+91' + patientPhone,
+            'clinic_preference': 'Bengaluru',
+            'page_location': window.location.href,
+            'page_title': document.title,
+            'timestamp': new Date().toISOString(),
+            'user_type': sessionStorage.getItem('on_returning') ? 'returning' : 'new',
+            'traffic_source': utmParams.source,
+            'utm_medium': utmParams.medium,
+            'campaign': utmParams.campaign,
+            'session_id': sessionId
+          });
+
+          // Mark session as returning for future visits
+          sessionStorage.setItem('on_returning', 'true');
+
+          // Mark as submitted (prevents duplicate submissions)
+          hasSubmitted = true;
+          isSubmitting = false;
+
+          // Transition to Thank You state WITHOUT page reload
+          formSection.style.display = 'none';
+          thankYouSection.classList.add('visible');
+
+          // Scroll form card into view for mobile users
+          document.getElementById('form-card').scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+          });
+
+        }, 1200); // Simulated 1.2s network latency
+      });
+    })();
+  </script>
+</body>
+</html>

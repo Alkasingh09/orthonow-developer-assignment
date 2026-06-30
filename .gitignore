@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+
+# PDF (not needed in repo)
+*.pdf
+
+# Temp files
+_extract_pdf.py
+*.log
