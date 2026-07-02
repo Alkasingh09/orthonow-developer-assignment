@@ -59,7 +59,7 @@ Namoza Developer Assignment/
 ├── assets/                            ← Static assets (currently empty — SVGs are inline)
 │   └── README.md                     ← Asset conventions documentation
 │
-└── loom-walkthrough-script.md         ← 8-minute video walkthrough script
+
 ```
 
 ---
